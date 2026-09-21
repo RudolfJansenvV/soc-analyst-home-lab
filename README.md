@@ -36,6 +36,11 @@ The systems are hosted in VirtualBox and connected through an isolated lab netwo
 - [ ] Stage 4 — Create incident reports
 - [ ] Stage 5 — Map activity to MITRE ATT&CK
 
+## Setup Documentation
+
+- [Wazuh server deployment](README.md)
+- [Windows endpoint deployment](windows-endpoint.md)
+
 ## Current Progress
 
 The Wazuh 4.14.7 server has been deployed and secured in VirtualBox. The dashboard is accessible through the private lab network, and the indexer, manager, Filebeat and dashboard services have been verified as running successfully.
