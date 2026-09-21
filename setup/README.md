@@ -52,6 +52,8 @@ ActiveState=active
 SubState=running
 ```
 
+![Wazuh services running](../screenshots/02-wazuh-services-running.png)
+
 ## Dashboard Verification
 
 The Wazuh dashboard was successfully accessed from the host computer through the private host-only network.
@@ -63,6 +65,8 @@ No endpoint agents were registered at this stage, which is expected because the 
 After changing the administrator password, the dashboard temporarily returned an HTTP 500 internal server error.
 
 The issue was investigated by checking the state of the Wazuh services. The services were restarted and then verified individually using `systemctl show`.
+
+![Wazuh dashboard overview](../screenshots/01-wazuh-dashboard-overview.png)
 
 This demonstrated the importance of:
 
