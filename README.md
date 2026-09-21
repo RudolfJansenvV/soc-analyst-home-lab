@@ -38,4 +38,8 @@ The systems are hosted in VirtualBox and connected through an isolated lab netwo
 
 ## Current Progress
 
-The repository and project structure have been created. The next step is deploying the Wazuh server.
+The Wazuh 4.14.7 server has been deployed and secured in VirtualBox. The dashboard is accessible through the private lab network, and the indexer, manager, Filebeat and dashboard services have been verified as running successfully.
+
+The next step is creating the Windows 11 endpoint and connecting it to Wazuh.
+
+See the [Stage 1 setup documentation](setup/README.md) for the deployment process.
