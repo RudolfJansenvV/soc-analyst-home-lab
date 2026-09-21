@@ -28,6 +28,8 @@ The addresses assigned during setup were:
 | Wazuh server | `192.168.56.101` | Monitoring server |
 | Windows endpoint | `192.168.56.102` | Monitored endpoint |
 
+![Windows network configuration](../screenshots/03-windows-network-configuration.png)
+
 These addresses are assigned by DHCP and may change after restarting the virtual machines.
 
 ## Setup Process
@@ -49,6 +51,7 @@ The Windows endpoint successfully reached the Wazuh server through the private h
 ```text
 Packets: Sent = 4, Received = 4, Lost = 0 (0% loss)
 ```
+![Windows baseline and Wazuh connectivity](../screenshots/04-windows-baseline-connectivity.png)
 
 ## Security Notes
 - The endpoint communicates with Wazuh through an isolated host-only network.
