@@ -38,8 +38,8 @@ The systems are hosted in VirtualBox and connected through an isolated lab netwo
 
 ## Setup Documentation
 
-- [Wazuh server deployment](README.md)
-- [Windows endpoint deployment](windows-endpoint.md)
+- [Wazuh server deployment](setup/README.md)
+- [Windows endpoint deployment](setup/windows-endpoint.md)
 
 ## Current Progress
 
