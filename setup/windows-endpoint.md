@@ -1,0 +1,64 @@
+# Windows 11 Endpoint Deployment
+
+## Objective
+
+Create a clean Windows 11 endpoint that can be monitored by the Wazuh server.
+
+## Environment
+
+- Windows 11 Enterprise Evaluation
+- Oracle VirtualBox
+- Hostname: `WIN11-SOC`
+- 4 virtual CPU cores
+- 6 GB RAM
+- 64 GB dynamically allocated storage
+- VirtualBox Guest Additions
+
+## Network Configuration
+
+The endpoint uses two virtual network adapters:
+
+- **NAT adapter:** Provides internet access for Windows updates and software downloads.
+- **Host-only adapter:** Provides private communication with the Wazuh server.
+
+The addresses assigned during setup were:
+
+| System | Host-only address | Purpose |
+|---|---:|---|
+| Wazuh server | `192.168.56.101` | Monitoring server |
+| Windows endpoint | `192.168.56.102` | Monitored endpoint |
+
+These addresses are assigned by DHCP and may change after restarting the virtual machines.
+
+## Setup Process
+
+1. Created the Windows 11 virtual machine.
+2. Allocated four CPU cores, 6 GB RAM and 64 GB storage.
+3. Configured NAT and host-only network adapters.
+4. Installed Windows 11 Enterprise Evaluation.
+5. Renamed the endpoint to `WIN11-SOC`.
+6. Installed VirtualBox Guest Additions.
+7. Installed all available Windows updates.
+8. Confirmed both network adapters using `ipconfig`.
+9. Tested communication with the Wazuh server using `ping`.
+
+## Connectivity Verification
+
+The Windows endpoint successfully reached the Wazuh server through the private host-only network.
+
+```text
+Packets: Sent = 4, Received = 4, Lost = 0 (0% loss)
+```
+
+## Security Notes
+- The endpoint communicates with Wazuh through an isolated host-only network.
+- Internet access is provided separately through NAT.
+- No router ports are forwarded to either virtual machine.
+- Credentials and personal information are excluded from the repository.
+- A clean baseline snapshot was created before installing monitoring software.
+
+## Next Steps
+- [ ] Install the Wazuh Windows agent
+- [ ] Register the endpoint with the Wazuh server
+- [ ] Confirm that Windows events appear in the dashboard
+- [ ] Install Sysmon for additional endpoint telemetry
