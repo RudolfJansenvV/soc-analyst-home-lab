@@ -43,8 +43,8 @@ The systems are hosted in VirtualBox and connected through an isolated lab netwo
 
 ## Current Progress
 
-The Wazuh 4.14.7 server has been deployed and secured in VirtualBox. The dashboard is accessible through the private lab network, and the indexer, manager, Filebeat and dashboard services have been verified as running successfully.
+The Wazuh 4.14.7 server and Windows 11 endpoint have been deployed in VirtualBox. Both systems use an isolated host-only network, and private communication between `WIN11-SOC` and the Wazuh server has been verified successfully.
 
-The next step is creating the Windows 11 endpoint and connecting it to Wazuh.
+The next step is installing and registering the Wazuh agent on the Windows endpoint.
 
-See the [Stage 1 setup documentation](setup/README.md) for the deployment process.
+See the [Wazuh server setup](setup/README.md) and [Windows endpoint setup](setup/windows-endpoint.md) for the deployment process.
