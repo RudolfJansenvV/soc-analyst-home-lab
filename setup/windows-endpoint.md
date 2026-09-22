@@ -72,6 +72,14 @@ Verified that the endpoint could reach the server on TCP ports 1514 and 1515, th
 
 ![WIN11-SOC active in Wazuh](../screenshots/07-WIN11-SOC-active-dashboard.png)
 
+## Windows Event Verification
+
+Confirmed that the Wazuh agent sends Windows events to the server.
+
+An alert from agent `001` (`WIN11-SOC`) showed a Windows System event with ID `7040`. Wazuh decoded the event and displayed the rule description, affected service and event time. This verifies the path from the Windows event log through the agent to the Wazuh dashboard.
+
+![Windows event received in Wazuh](../screenshots/08-windows-event-in-wazuh.png)
+
 ## Next Steps
 - [ ] Install the Wazuh Windows agent
 - [ ] Register the endpoint with the Wazuh server
