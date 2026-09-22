@@ -80,6 +80,15 @@ An alert from agent `001` (`WIN11-SOC`) showed a Windows System event with ID `7
 
 ![Windows event received in Wazuh](../screenshots/08-windows-event-in-wazuh.png)
 
+### Sysmon event collection verified
+
+- Confirmed Sysmon process events in the Windows event log.
+- Configured the Wazuh agent to collect `Microsoft-Windows-Sysmon/Operational`.
+- Launched Notepad as a test. A search of Wazuh's temporary JSON event archive found 2 records containing `notepad.exe`, confirming delivery to the manager.
+- Disabled full event archiving after the test and confirmed `wazuh-manager` was active.
+
+**Storage note:** The Wazuh VM's 25 GB disk filled with vulnerability feed data. Temporary update:contentReference[oaicite:0]{index=0}Detection is paused until the disk is expanded. Sysmon collection remains enabled.
+
 ## Next Steps
 - [ ] Install the Wazuh Windows agent
 - [ ] Register the endpoint with the Wazuh server
