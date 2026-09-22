@@ -60,6 +60,18 @@ Packets: Sent = 4, Received = 4, Lost = 0 (0% loss)
 - Credentials and personal information are excluded from the repository.
 - A clean baseline snapshot was created before installing monitoring software.
 
+## Wazuh Agent Enrollment
+
+Installed the Wazuh 4.14.7 Windows agent on `WIN11-SOC` and configured it to connect to the Wazuh server over the private lab network.
+
+Verified that the endpoint could reach the server on TCP ports 1514 and 1515, that the Windows `WazuhSvc` service was running, and that the dashboard listed `WIN11-SOC` as Active.
+
+![Agent port tests](../screenshots/05-port-tests.png)
+
+![Wazuh agent service running](../screenshots/06-WazuhSvc.png)
+
+![WIN11-SOC active in Wazuh](../screenshots/07-WIN11-SOC-active-dashboard.png)
+
 ## Next Steps
 - [ ] Install the Wazuh Windows agent
 - [ ] Register the endpoint with the Wazuh server
