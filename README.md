@@ -48,3 +48,5 @@ The Wazuh 4.14.7 server and Windows 11 endpoint have been deployed in VirtualBox
 The next step is installing and registering the Wazuh agent on the Windows endpoint.
 
 See the [Wazuh server setup](setup/README.md) and [Windows endpoint setup](setup/windows-endpoint.md) for the deployment process.
+
+- [Investigation 01: Encoded PowerShell Execution](investigations/01-encoded-powershell.md)
