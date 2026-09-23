@@ -152,7 +152,7 @@ The URL was not opened during the investigation.
 |Subject |	`URGENT: Your Microsoft 365 password expires today`|
 
 ## MITRE ATT&CK mapping
-###Observed technique
+### Observed technique
 |Technique |	Name |	Tactic|
 |---|---|---|
 |`T1566.002` |	Phishing: Spearphishing Link |	Initial Access|
