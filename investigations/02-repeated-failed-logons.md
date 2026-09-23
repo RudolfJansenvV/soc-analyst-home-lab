@@ -86,7 +86,7 @@ This could make a rapid password-guessing pattern less visible to an analyst, pa
 A custom correlation rule was therefore created to raise the severity when five failures target the same account within 60 seconds.
 
 ## Custom correlation rule
-```
+```xml
 <group name="windows,authentication_failed,">
   <rule id="100102" level="10" frequency="5" timeframe="60" ignore="120">
     <if_matched_sid>60122</if_matched_sid>
@@ -113,20 +113,24 @@ The rule:
 
 ## Correlation result
 
-The repeated test successfully generated custom rule 100102:
+The repeated test successfully generated custom rule `100102`:
+
+![Correlated failed-logon alert](../screenshots/14-correlated-failed-logon-alert.png)
 
 The alert details confirmed the frequency, target account, status codes, logon type and MITRE ATT&CK mapping:
 
+![Correlated failed-logon details](../screenshots/15-correlated-failed-logon-details.png)
+
 ## Analyst assessment
 
-## Why the activity was suspicious
+### Why the activity was suspicious
 - Five failures occurred within a few seconds.
 - Every attempt targeted the same valid account.
 - The incorrect password substatus indicated repeated credential attempts.
 - Rapid repeated failures can indicate automated password guessing.
 - The behavior mapped to MITRE ATT&CK T1110.001.
 
-## Why the activity was benign
+### Why the activity was benign
 - The attempts were part of an authorized lab exercise.
 - The temporary account was created specifically for testing.
 - The activity originated locally from the expected PowerShell process.
@@ -171,8 +175,3 @@ This investigation demonstrated:
 - Alert triage and incident classification.
 
 The custom rule successfully elevated five related level-5 alerts into one level-10 password-guessing alert.
-
-
-Add this to the root README under `## Investigations`:
-
-- [Investigation 02: Repeated Failed Windows Logons](investigations/02-repeated-failed-logons.md)
