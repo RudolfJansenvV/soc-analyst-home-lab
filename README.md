@@ -30,8 +30,8 @@ The systems are hosted in VirtualBox and connected through an isolated lab netwo
 
 ## Project Stages
 
-- [ ] Stage 1 — Build the monitoring environment
-- [ ] Stage 2 — Generate and investigate security alerts
+- [x] Stage 1 — Build the monitoring environment
+- [x] Stage 2 — Generate and investigate security alerts
 - [ ] Stage 3 — Conduct a phishing investigation
 - [ ] Stage 4 — Create incident reports
 - [ ] Stage 5 — Map activity to MITRE ATT&CK
@@ -45,8 +45,8 @@ The systems are hosted in VirtualBox and connected through an isolated lab netwo
 
 The Wazuh 4.14.7 server and Windows 11 endpoint have been deployed in VirtualBox. Both systems use an isolated host-only network, and private communication between `WIN11-SOC` and the Wazuh server has been verified successfully.
 
-The next step is installing and registering the Wazuh agent on the Windows endpoint.
-
 See the [Wazuh server setup](setup/README.md) and [Windows endpoint setup](setup/windows-endpoint.md) for the deployment process.
+
+## Investigations
 
 - [Investigation 01: Encoded PowerShell Execution](investigations/01-encoded-powershell.md)
