@@ -50,3 +50,4 @@ See the [Wazuh server setup](setup/README.md) and [Windows endpoint setup](setup
 ## Investigations
 
 - [Investigation 01: Encoded PowerShell Execution](investigations/01-encoded-powershell.md)
+- [Investigation 02: Repeated Failed Windows Logons](investigations/02-repeated-failed-logons.md)
