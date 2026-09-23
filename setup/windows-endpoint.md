@@ -87,10 +87,12 @@ An alert from agent `001` (`WIN11-SOC`) showed a Windows System event with ID `7
 - Launched Notepad as a test. A search of Wazuh's temporary JSON event archive found 2 records containing `notepad.exe`, confirming delivery to the manager.
 - Disabled full event archiving after the test and confirmed `wazuh-manager` was active.
 
-**Storage note:** The Wazuh VM's 25 GB disk filled with vulnerability feed data. Temporary update:contentReference[oaicite:0]{index=0}Detection is paused until the disk is expanded. Sysmon collection remains enabled.
+**Storage note:** The Wazuh VM's original 25 GB disk filled with vulnerability feed data. After clearing temporary updater content, the virtual disk and XFS filesystem were expanded to 50 GB. Vulnerability Detection was then re-enabled, and all Wazuh services were confirmed active.
 
-## Next Steps
-- [ ] Install the Wazuh Windows agent
-- [ ] Register the endpoint with the Wazuh server
-- [ ] Confirm that Windows events appear in the dashboard
-- [ ] Install Sysmon for additional endpoint telemetry
+## Completed Steps
+
+- [x] Install the Wazuh Windows agent
+- [x] Register the endpoint with the Wazuh server
+- [x] Confirm that Windows events appear in the dashboard
+- [x] Install and configure Sysmon
+- [x] Verify Sysmon telemetry reaches Wazuh
