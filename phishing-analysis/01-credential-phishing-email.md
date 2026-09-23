@@ -44,9 +44,9 @@ A SHA256 hash was calculated to establish evidence integrity:
 ```text
 9FF7F9A713CE37C9AD09C936EC9AB0FB9CEEDF7FA34A80086641D4625C7FE495
 ```
-
+![Phishing email SHA256](../screenshots/18-phishing-email-sha256.png)
 ## Header analysis
-
+![Phishing email headers](../screenshots/16-phishing-email-headers.png)
 ### Sender identity
 
 The displayed sender was:
@@ -106,10 +106,10 @@ The message failed DMARC validation, and the receiving mail system applied a qua
 Authentication failure alone does not always prove maliciousness. In this case, the failures were supported by multiple additional phishing indicators.
 
 ## Body and social-engineering analysis
-
+![Phishing email body](../screenshots/17-phishing-email-body.png)
 The email contained several social-engineering indicators:
 
-Impersonation of Microsoft 365.
+- Impersonation of Microsoft 365.
 - A generic `Dear User` greeting.
 - A claim that the recipient’s password would expire that day.
 - Pressure to act immediately.
@@ -124,7 +124,7 @@ The wording attempted to create fear and urgency so the recipient would act befo
 
 The email contained:
 ```
-http://login.microsoftonline.com.example/account/verify`
+http://login.microsoftonline.com.example/account/verify
 ```
 Defanged form:
 ```
@@ -143,7 +143,7 @@ The URL was not opened during the investigation.
 |Sender |	`security-alert@micros0ft-support[.]example`|
 |Sender domain |	`micros0ft-support[.]example`|
 |Reply-To |	`account-review@secure-login[.]example`|
-|Reply-To | `domain	secure-login[.]example`|
+|Reply-To domain | `secure-login[.]example` |
 |Return-Path |	`bounce@bulkmailer[.]example`|
 |Sending domain |	`bulkmailer[.]example`|
 |Sending IP |	`203[.]0[.]113[.]45` |
@@ -152,14 +152,14 @@ The URL was not opened during the investigation.
 |Subject |	`URGENT: Your Microsoft 365 password expires today`|
 
 ## MITRE ATT&CK mapping
-Observed technique
+###Observed technique
 |Technique |	Name |	Tactic|
 |---|---|---|
 |`T1566.002` |	Phishing: Spearphishing Link |	Initial Access|
 
 The email delivered a deceptive link and attempted to persuade the recipient to interact with it.
 
-## Suspected objective
+### Suspected objective
 |Technique |	Name |	Tactic|
 |---|---|---|
 |`T1056.003` |	Input Capture: Web Portal Capture	| Credential Access / Collection|
