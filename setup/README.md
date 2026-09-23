@@ -104,9 +104,9 @@ Final filesystem status:
 
 ![Wazuh service and storage health](../screenshots/09-wazuh-50gb-service-health.png)
 
-## Next Steps
-- [ ] Create a clean Wazuh server snapshot
-- [ ] Build the Windows 11 endpoint
-- [ ] Install the Wazuh agent
-- [ ] Connect the endpoint to the Wazuh server
-- [ ] Confirm that Windows events reach the dashboard
+## Complete
+- [x] Create a clean Wazuh server snapshot
+- [x] Build the Windows 11 endpoint
+- [x] Install the Wazuh agent
+- [x] Connect the endpoint to the Wazuh server
+- [x] Confirm that Windows events reach the dashboard
