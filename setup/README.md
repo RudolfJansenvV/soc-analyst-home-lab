@@ -81,6 +81,29 @@ This demonstrated the importance of:
 - Did not configure router port forwarding.
 - Kept passwords and sensitive configuration out of GitHub.
 
+## Storage recovery and VM expansion
+
+The Wazuh manager stopped because its original 25 GB virtual disk reached 100% usage. Investigation identified the main storage consumers as the vulnerability detection database and temporary updater content under `/var/ossec/queue/`.
+
+Recovery actions:
+
+- Cleared 8.6 GB of temporary vulnerability updater content.
+- Temporarily disabled Vulnerability Detection.
+- Created a full clone of the current Wazuh VM.
+- Expanded the cloned VDI from 25 GB to 50 GB.
+- Expanded `/dev/sda1` and its XFS filesystem.
+- Re-enabled Vulnerability Detection.
+- Confirmed `wazuh-indexer`, `wazuh-manager`, `filebeat`, and `wazuh-dashboard` were active.
+
+Final filesystem status:
+
+- Capacity: 50 GB
+- Used: 17 GB
+- Available: 34 GB
+- Usage: 33%
+
+![Wazuh service and storage health](../screenshots/09-wazuh-50gb-service-health.png)
+
 ## Next Steps
 - [ ] Create a clean Wazuh server snapshot
 - [ ] Build the Windows 11 endpoint
