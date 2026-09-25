@@ -47,12 +47,14 @@ Level 12 alert
 
 Wazuh generated the following alert:
 
+![Encoded PowerShell alert](../screenshots/10-encoded-powershell-alert.png)
+
 Detection details
 |Field |	Value |
 |---|---|
 |Wazuh rule |	`92057` |
 |Rule level |	`12` |
-|Description	PowerShell spawned a PowerShell process which executed a Base64-encoded command |
+|Description |	PowerShell spawned a PowerShell process which executed a Base64-encoded command |
 |Event source |	`Microsoft-Windows-Sysmon/Operational` |
 |Sysmon event ID |	`1` — Process creation |
 |Provider |	`Microsoft-Windows-Sysmon` |
@@ -92,13 +94,15 @@ Write-Output 'SOC-LAB-ENCODED-TEST'
 The decoded command only printed a test string.
 
 Executable hash
+```text
 SHA256=8BB6FA8C283B4D92120B1EF249A9B311B0F804D4CABBE9981159976C8BE76A5E
-
+```
 The executable path and metadata were consistent with Windows PowerShell. A legitimate path or company field alone was not treated as proof of safety; the process context and decoded command were also examined.
 
 Detailed technical evidence is available in:
 
 Investigation 01: Encoded PowerShell Execution
+[Investigation 01: Encoded PowerShell Execution](../investigations/01-encoded-powershell.md)
 
 ## Scope and impact
 
@@ -172,7 +176,7 @@ The activity was determined to be benign because:
 - The decoded payload contained only a harmless output command.
 - The observed user and process chain matched the test.
 - No malicious follow-on behavior was identified.
--No systems or accounts were compromised.
+- No systems or accounts were compromised.
 
 ## Lessons learned
 
