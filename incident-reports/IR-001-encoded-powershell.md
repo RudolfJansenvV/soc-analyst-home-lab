@@ -101,7 +101,6 @@ The executable path and metadata were consistent with Windows PowerShell. A legi
 
 Detailed technical evidence is available in:
 
-Investigation 01: Encoded PowerShell Execution
 [Investigation 01: Encoded PowerShell Execution](../investigations/01-encoded-powershell.md)
 
 ## Scope and impact
