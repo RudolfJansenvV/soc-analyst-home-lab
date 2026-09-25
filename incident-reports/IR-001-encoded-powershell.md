@@ -49,7 +49,7 @@ Wazuh generated the following alert:
 
 ![Encoded PowerShell alert](../screenshots/10-encoded-powershell-alert.png)
 
-Detection details
+### Detection details
 |Field |	Value |
 |---|---|
 |Wazuh rule |	`92057` |
@@ -93,7 +93,7 @@ Write-Output 'SOC-LAB-ENCODED-TEST'
 ```
 The decoded command only printed a test string.
 
-Executable hash
+### Executable hash
 ```text
 SHA256=8BB6FA8C283B4D92120B1EF249A9B311B0F804D4CABBE9981159976C8BE76A5E
 ```
