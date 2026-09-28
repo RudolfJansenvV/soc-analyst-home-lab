@@ -43,7 +43,18 @@ The systems are hosted in VirtualBox and connected through an isolated lab netwo
 
 ## Current Progress
 
-The Wazuh 4.14.7 server and Windows 11 endpoint have been deployed in VirtualBox. Both systems use an isolated host-only network, and private communication between `WIN11-SOC` and the Wazuh server has been verified successfully.
+The SOC Analyst Home Lab is operational and the initial project roadmap is complete.
+
+The environment includes a Wazuh 4.14.7 server, a monitored Windows 11 endpoint, Sysmon telemetry and an isolated VirtualBox network. The project now contains:
+
+- Two documented endpoint investigations
+- A credential-phishing analysis
+- A formal incident report
+- A custom Wazuh correlation rule
+- Consolidated MITRE ATT&CK coverage
+- Supporting screenshots and preserved evidence
+
+The lab demonstrates practical experience with SIEM monitoring, Windows event analysis, alert triage, detection engineering, phishing analysis, incident documentation and MITRE ATT&CK mapping.
 
 See the [Wazuh server setup](setup/README.md) and [Windows endpoint setup](setup/windows-endpoint.md) for the deployment process.
 
