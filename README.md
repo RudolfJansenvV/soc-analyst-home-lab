@@ -34,7 +34,7 @@ The systems are hosted in VirtualBox and connected through an isolated lab netwo
 - [x] Stage 2 — Generate and investigate security alerts
 - [x] Stage 3 — Conduct a phishing investigation
 - [x] Stage 4 — Create incident reports
-- [ ] Stage 5 — Map activity to MITRE ATT&CK
+- [x] Stage 5 — Map activity to MITRE ATT&CK
 
 ## Setup Documentation
 
@@ -53,3 +53,8 @@ See the [Wazuh server setup](setup/README.md) and [Windows endpoint setup](setup
 - [Investigation 02: Repeated Failed Windows Logons](investigations/02-repeated-failed-logons.md)
 - [Phishing Case 01: Microsoft 365 Credential Phishing](phishing-analysis/01-credential-phishing-email.md)
 - [Incident Report IR-001: Encoded PowerShell Execution](incident-reports/IR-001-encoded-powershell.md)
+
+## Detections and ATT&CK Coverage
+
+- [Windows failed-logon correlation rule](detections/windows-auth-correlation-rule.xml)
+- [MITRE ATT&CK coverage](detections/mitre-attack-coverage.md)
